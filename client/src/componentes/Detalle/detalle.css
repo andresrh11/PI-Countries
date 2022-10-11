@@ -1,0 +1,32 @@
+.contenedor__detalle{
+    display: flex;
+    align-content: center;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../img/mapa.jpg);
+   
+
+}
+.detalle{
+    
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 800px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    padding-bottom: 30px;
+    padding-top: 20px;
+    
+    height: auto;
+
+}
+.div__act{
+    width: 500px;
+    height: 200px;
+    border: 1px solid green;
+}

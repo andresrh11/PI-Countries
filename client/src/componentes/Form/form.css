@@ -1,0 +1,70 @@
+.contenedor__total{
+    display: flex;
+    flex-flow: row;
+    width: 1920px;
+    height: 969px;
+    justify-content: center;
+    align-items:center;
+   
+}
+.contenedor__form{
+    display: flex;
+    
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formulario{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    border: 1px solid green;
+    width: 500px;
+    height: 500px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+
+}
+.boton__creacion{
+    border-radius: 15px;
+    background: rgb(0 128 55);
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    border:none;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+.creacion{
+    font-family: "Roboto", sans-serif;
+}
+.nombre{
+    font-family: "Roboto", sans-serif;  
+}
+.dificultad{
+    font-family: "Roboto", sans-serif;
+}
+.temporada{
+    font-family: "Roboto", sans-serif;
+}
+.duracion{
+    font-family: "Roboto", sans-serif;
+}
+.pais{
+    font-family: "Roboto", sans-serif;
+}
+.danger{
+    color: red;
+}
+.deshabilitado{
+    display: none;
+}

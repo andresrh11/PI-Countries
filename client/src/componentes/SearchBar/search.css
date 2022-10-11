@@ -1,0 +1,28 @@
+.input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    border: none;
+    
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+.link__text{
+    color: black;
+    font-family:  "Roboto", sans-serif;
+}
+.lista{
+    width: 300px;
+    position: absolute;
+    background-color: rgb(247, 247, 247);
+    height: auto;
+    color: black;  
+}
+.search__bar{
+    color: black;
+    font-family:  "Roboto", sans-serif;
+}

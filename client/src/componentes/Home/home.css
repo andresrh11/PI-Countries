@@ -1,0 +1,15 @@
+.home{
+    
+    display: flex;
+    flex-flow: row;
+}
+.activities__home{
+    width: 20%;
+    height: auto;
+    
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+.div__cards{
+    width: 80%;
+    height: auto;
+}

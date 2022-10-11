@@ -1,0 +1,22 @@
+.cardContainer{
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    background: fixed;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    text-align: center;
+    height: 400px;
+    width: 450px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: black;
+    
+    align-content: center;
+}
+.bandera{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}

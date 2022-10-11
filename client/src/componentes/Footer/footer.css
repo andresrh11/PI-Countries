@@ -1,0 +1,44 @@
+.footer{
+
+    background: rgb(0 128 55);
+    display: flex;
+    align-content: space-evenly;
+    align-items: center;
+    padding: 0 30px ;
+    position: relative;
+    bottom: 0px;
+    justify-content: space-between;
+    width: 1860px;
+    height: 90px;
+
+}
+.contenedor_iconos{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer__creado{
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    
+}
+.footer__ig{
+
+    cursor: pointer;
+    width: 60px;
+
+}
+.footer__linked{
+
+    cursor: pointer;
+    width: 60px;
+
+}

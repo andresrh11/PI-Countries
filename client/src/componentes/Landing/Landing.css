@@ -1,0 +1,80 @@
+.landingContainer{
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 1918px;
+    height: 780px;
+}
+
+.contenedor{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%; 
+    background-image: url('../../img/map-117174.png');
+}
+.link{
+    text-decoration-line: none;
+    color: white;
+}
+.boton{
+    border: none;
+    background: rgb(0 128 55);
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+.info{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    color: white;
+    justify-content: center;
+   
+}
+.go{
+    color: white;
+}
+.landing{
+    width: 1922px;
+    height: 798px;
+    position: absolute;
+}
+
+
+
+.footers{
+    position: absolute;
+    bottom: 0px;
+}
+.h1{
+
+    color: #000000;
+    font-weight: 800;
+    font-size: 4em;
+    letter-spacing: -2px;
+    text-shadow: 1px 3px 1px rgb(6, 32, 54);
+    letter-spacing: 1px;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 80px;
+}
+.p{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(254, 254, 254, 0.862);
+}

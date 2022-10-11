@@ -1,0 +1,42 @@
+.nav{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    width: auto;
+    justify-content: space-between;
+    padding: 0 35px;
+    
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    height: 90px;
+    ;
+    
+}
+
+.boton__crear{
+    border-radius: 15px;
+    background: rgb(0 128 55);
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 9px;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+.link{
+    text-decoration: none;
+    
+}
+.filtros{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    width: 700px;
+    justify-content: space-between;
+}
