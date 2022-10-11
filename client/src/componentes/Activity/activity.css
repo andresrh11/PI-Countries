@@ -1,0 +1,16 @@
+.actividades{
+    border: 2px solid rgba(19, 83, 6, 0.731);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    background-color: rgb(168, 165, 185);
+}

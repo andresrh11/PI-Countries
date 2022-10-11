@@ -13,7 +13,7 @@ export default function Navbar({ setPaginaActual }) {
         </button>
       </Link>
       <div className="filtros">
-        <FiltroContAct />
+        <FiltroContAct setPaginaActual={setPaginaActual} />
         <FiltroOrdenamiento setPaginaActual={setPaginaActual} />
       </div>
     </div>

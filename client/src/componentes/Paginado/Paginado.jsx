@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+
 import "./paginado.css";
 export default function Paginado({
   paginitas,
@@ -8,7 +8,6 @@ export default function Paginado({
   setPaginaActual,
   paginaActual,
   setPaisesPorPagina,
-  paisesActuales,
 }) {
   const [maxPages, setMaxPages] = useState(6);
   const [pages, setPages] = useState(6);
@@ -19,34 +18,32 @@ export default function Paginado({
   }
 
   function handleNext() {
-    if (paginaActual !== 1) setPaisesPorPagina(10);
-    if (paginaActual === 1) setPaisesPorPagina(9);
-
     if (paginaActual !== numerosPag.length) {
       setPaginaActual(paginaActual + 1);
-    }
-    if (paginaActual + 1 > maxPages) {
+    } else if (paginaActual + 1 > maxPages) {
       setMaxPages(maxPages + pages);
       setMinPages(minPages + pages);
     }
   }
+
+  if (paginaActual === 1) setPaisesPorPagina(9);
+  else if (paginaActual !== 1) setPaisesPorPagina(10);
   function handlePrev() {
-    if (paginaActual !== 1) setPaisesPorPagina(10);
-    if (paginaActual === 1) setPaisesPorPagina(9);
     if (paginaActual !== 1) {
       setPaginaActual(paginaActual - 1);
-    }
-    if ((paginaActual - 1) % pages === 0) {
+    } else if ((paginaActual - 1) % pages === 0) {
       setMaxPages(maxPages - pages);
       setMinPages(minPages - pages);
     }
   }
+  if (paginaActual !== 1) setPaisesPorPagina(10);
+  else setPaisesPorPagina(9);
   return (
     <nav>
       <ul className="paginado">
         <button
           className={paginaActual === 1 ? "boton__off" : "boton__on"}
-          onClick={handlePrev}
+          onClick={() => handlePrev()}
         >
           ‹
         </button>
@@ -71,7 +68,7 @@ export default function Paginado({
           className={
             paginaActual === numerosPag.length ? "boton__off" : "boton__on"
           }
-          onClick={handleNext}
+          onClick={() => handleNext()}
         >
           ›
         </button>

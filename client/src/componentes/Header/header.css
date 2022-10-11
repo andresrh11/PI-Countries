@@ -5,7 +5,8 @@
     align-items: center;
     padding: 0 30px ;
     position: relative;
-    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     justify-content: space-between;
     width: 1850px;
     height: 90px;
@@ -18,11 +19,13 @@
     align-content: center;
 }
 .nav__ul{
-   
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     list-style: none;
 }
 .link__head{
     text-decoration: none;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }

@@ -39,7 +39,6 @@ function Cards({ paginaActual, setPaginaActual }) {
             setPaginaActual={setPaginaActual}
             paginaActual={paginaActual}
             setPaisesPorPagina={setPaisesPorPagina}
-            paises={paisesActuales}
           />
         </div>
         <div className="cards">
@@ -50,18 +49,6 @@ function Cards({ paginaActual, setPaginaActual }) {
               </Link>
             );
           })}
-        </div>
-
-        <div>
-          <Paginado
-            paisesPorPagina={paisesPorPagina}
-            paginitas={countries.length}
-            paginacion={paginacion}
-            setPaginaActual={setPaginaActual}
-            paginaActual={paginaActual}
-            setPaisesPorPagina={setPaisesPorPagina}
-            paisesActuales={paisesActuales}
-          />
         </div>
       </div>
     );

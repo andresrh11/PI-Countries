@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 .contenedor__pobla{
     font-size: 10px;
@@ -22,6 +24,8 @@
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 .contenedorFiltroCont{
     display: flex;
@@ -31,11 +35,15 @@
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+   
 }
 
 .filtro__actividad{
     display: flex;
-    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     height: auto;
     padding-bottom: 20px;
     flex-flow: column;
@@ -56,11 +64,35 @@
     color: white;
     border:none;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
-    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     justify-content: center;
 }
 .contenedor__bot{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+.select__continente{
+    border: none;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+.select__minmax{
+    border: none;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+.select__az{
+    border: none;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }

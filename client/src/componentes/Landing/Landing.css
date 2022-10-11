@@ -63,18 +63,18 @@
     font-weight: 800;
     font-size: 4em;
     letter-spacing: -2px;
-    text-shadow: 1px 3px 1px rgb(6, 32, 54);
+    font-weight: bold;
     letter-spacing: 1px;
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Monserrat';
     font-size: 80px;
 }
 .p{
     color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 1px;
-    
+    font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(254, 254, 254, 0.862);
 }

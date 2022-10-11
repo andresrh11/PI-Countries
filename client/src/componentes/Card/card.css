@@ -11,7 +11,8 @@
     padding-top: 10px;
     text-decoration: none;
     color: black;
-    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     align-content: center;
 }
 .bandera{

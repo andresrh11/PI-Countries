@@ -128,17 +128,23 @@ export default function Form() {
       <div className="contenedor__total">
         <form onSubmit={handleSubmit} className="formulario">
           <h1 className="creacion">CREACION DE ACTIVIDAD</h1>
-          <label className="nombre">Nombre:</label>
+          <label className="nombre">Campos con {"(*)"} son obligatorios</label>
+          <label className="nombre">{"(*)"}Nombre:</label>
           <input
             type="text"
             name="name"
             value={activities.name}
             onChange={handleInputChange}
             placeholder="Nombre"
+            className={errors.name ? "input__name__error" : "input__name"}
           ></input>
           {errors.name && <p className="danger">{errors.name}</p>}
-          <label className="duracion">Duracion:</label>
-          <select name="duracion" onChange={handleDuracion}>
+          <label className="duracion">{"(*)"}Duracion:</label>
+          <select
+            name="duracion"
+            onChange={handleDuracion}
+            className={errors.duracion ? "input__name__error" : "input__name"}
+          >
             <option></option>
             <option value="1">1 Hora</option>
             <option value="2">2 Horas</option>
@@ -154,9 +160,9 @@ export default function Form() {
             <option value="12">12 Horas</option>
           </select>
           {errors.duracion && <p className="danger">{errors.duracion}</p>}
-          <label className="dificultad">Dificultad:</label>
+          <label className="dificultad">{"(*)"}Dificultad:</label>
+
           <input
-            className="input__barra"
             type="range"
             name="dificultad"
             id="dificultad"
@@ -166,8 +172,12 @@ export default function Form() {
             onChange={handleDificultad}
           ></input>
           {errors.dificultad && <p className="danger">{errors.dificultad}</p>}
-          <label className="temporada">Temporada</label>
-          <select name="temporada" onChange={handleTemporada}>
+          <label className="temporada">{"(*)"}Temporada</label>
+          <select
+            name="temporada"
+            onChange={handleTemporada}
+            className={errors.temporada ? "input__name__error" : "input__name"}
+          >
             <option></option>
             <option value="Verano">Verano</option>
             <option value="Otoño">Otoño</option>
@@ -175,8 +185,13 @@ export default function Form() {
             <option value="Primavera">Primavera</option>
           </select>
           {errors.temporada && <p className="danger">{errors.temporada}</p>}
-          <label className="pais">Codigo de pais:</label>
-          <select name="countries" onChange={(e) => addPais(e)} value="">
+          <label className="pais">{"(*)"}Codigo de pais:</label>
+          <select
+            name="countries"
+            onChange={(e) => addPais(e)}
+            value=""
+            className={errors.countries ? "input__name__error" : "input__name"}
+          >
             <option value="">Selecciona uno:</option>
 
             {countriesFiltro.map((e) => {
@@ -189,14 +204,13 @@ export default function Form() {
           </select>
           {errors.countries && <p className="danger">{errors.countries}</p>}
           <div className="caja__paises">
-            <h2>Seleccionados</h2>
+            <h2>Seleccionados:</h2>
             <div>
               {activities.countries
                 ? countriesFiltro.map((e) => {
                     if (activities.countries.includes(e.id.toString())) {
                       return (
-                        <div key={e.id} className="seleccionado">
-                          <p>{e.name}</p>
+                        <div key={e.id} className="pais__seleccionado">
                           <button
                             value={e.id}
                             name="countries"
@@ -205,6 +219,7 @@ export default function Form() {
                           >
                             ×
                           </button>
+                          <p className="p_nombre">{e.name}</p>
                         </div>
                       );
                     } else {
