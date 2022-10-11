@@ -20,18 +20,20 @@ export default function Paginado({
   function handleNext() {
     if (paginaActual !== numerosPag.length) {
       setPaginaActual(paginaActual + 1);
-    } else if (paginaActual + 1 > maxPages) {
+    }
+    if (paginaActual + 1 > maxPages) {
       setMaxPages(maxPages + pages);
       setMinPages(minPages + pages);
     }
   }
-
   if (paginaActual === 1) setPaisesPorPagina(9);
   else if (paginaActual !== 1) setPaisesPorPagina(10);
+
   function handlePrev() {
     if (paginaActual !== 1) {
       setPaginaActual(paginaActual - 1);
-    } else if ((paginaActual - 1) % pages === 0) {
+    }
+    if ((paginaActual - 1) % pages === 0) {
       setMaxPages(maxPages - pages);
       setMinPages(minPages - pages);
     }
@@ -43,9 +45,9 @@ export default function Paginado({
       <ul className="paginado">
         <button
           className={paginaActual === 1 ? "boton__off" : "boton__on"}
-          onClick={() => handlePrev()}
+          onClick={handlePrev}
         >
-          ‹
+          <h1>‹</h1>
         </button>
         {numerosPag &&
           numerosPag.map((e) => {
@@ -68,7 +70,7 @@ export default function Paginado({
           className={
             paginaActual === numerosPag.length ? "boton__off" : "boton__on"
           }
-          onClick={() => handleNext()}
+          onClick={handleNext}
         >
           ›
         </button>

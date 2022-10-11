@@ -5,18 +5,14 @@ import "./filtroo.css";
 
 export default function FiltroOrdenamiento({ setPaginaActual }) {
   const dispatch = useDispatch();
-  const [orden, setOrden] = useState("");
+
   function handleSort(e) {
-    e.preventDefault();
-    dispatch(ordenamientoFilter(e.target.value));
     setPaginaActual(1);
-    setOrden(`Ordenado ${e.target.value}`);
+    dispatch(ordenamientoFilter(e.target.value));
   }
   function handleSortp(e) {
-    e.preventDefault();
-    dispatch(ordenamientoP(e.target.value));
     setPaginaActual(1);
-    setOrden(`Ordenado ${e.target.value}`);
+    dispatch(ordenamientoP(e.target.value));
   }
   return (
     <>

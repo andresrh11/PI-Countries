@@ -19,7 +19,7 @@ function Home() {
         </div>
         <div className="home">
           <div className="activities__home">
-            <FiltroActiv setPaginaActual={setPaginaActual} />
+            <FiltroActiv />
           </div>
           <div className="div__cards">
             <Cards

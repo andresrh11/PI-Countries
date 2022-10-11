@@ -5,8 +5,8 @@ import "./filtroo.css";
 export default function FiltroContAct({ setPaginaActual }) {
   const dispatch = useDispatch();
   function handleFilter(e) {
-    dispatch(filterCountries(e.target.value));
     setPaginaActual(1);
+    dispatch(filterCountries(e.target.value));
   }
   return (
     <div className="contenedorFiltroCont">
