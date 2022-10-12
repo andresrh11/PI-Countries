@@ -9,9 +9,9 @@ import {
 import "./filtroo.css";
 export default function FiltroActiv() {
   const activities = useSelector((state) => state.getActivities);
-  const filtroPais = useSelector((state) => state.countryId);
+  const filtroPais = useSelector((state) => state.coutriesAll);
   const dispatch = useDispatch();
-  console.log("actividad: " + activities.name);
+
   activities.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
@@ -20,7 +20,6 @@ export default function FiltroActiv() {
     }
     return 0;
   });
-
   useEffect(() => {
     dispatch(getActivitiesDb());
   }, [dispatch]);
@@ -28,7 +27,7 @@ export default function FiltroActiv() {
   function handleFilterA(e) {
     if (e.target.checked) {
       dispatch(filtroActividades(e.target.value));
-    } else {
+    } else if (!e.target.checked) {
       dispatch(getAllCountries());
     }
   }
@@ -43,6 +42,7 @@ export default function FiltroActiv() {
             return (
               <form key={e.id}>
                 <input
+                  className="check"
                   type="checkbox"
                   name={e.name}
                   value={e.name}

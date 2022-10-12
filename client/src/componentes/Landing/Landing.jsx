@@ -8,7 +8,7 @@ function Landing() {
   return (
     <>
       <Header />
-      <body className="landingContainer">
+      <div className="landingContainer">
         <div className="info">
           <h1 className="h1">E-WORLD</h1>
           <p className="p">¡Bienvenido a E-World!</p>
@@ -27,7 +27,7 @@ function Landing() {
             </button>{" "}
           </Link>
         </div>
-      </body>
+      </div>
       <footer className="footers">
         <Footer />
       </footer>

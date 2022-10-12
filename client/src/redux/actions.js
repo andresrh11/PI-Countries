@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const GET_ALL_COUNTRIES = "GET_ALL_COUNTRIES";
-export const CREATE_ACTIVITY = "CREATE_ACTIVITY";
+
 export const SEARCH_COUNTRY = "SEARCH_COUNTRY";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const FILTER_STATUS = "FILTER_STATUS";
@@ -35,10 +35,7 @@ export const createActivity = (payload) => async (dispatch) => {
   try {
     const res = await axios.post("http://localhost:3001/activities", payload);
 
-    dispatch({
-      type: CREATE_ACTIVITY,
-      payload: res.data,
-    });
+    return res;
   } catch (error) {
     console.log(error);
   }

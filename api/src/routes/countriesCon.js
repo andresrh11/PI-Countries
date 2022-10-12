@@ -27,6 +27,7 @@ router.get("/countries", async (req, res) => {
     subregion,
     population,
     flags,
+    activities,
   } = req.query;
   try {
     if (name) {
@@ -42,22 +43,34 @@ router.get("/countries", async (req, res) => {
         ? res.json(paisQuery)
         : res.status(500).json({ message: `${name} no existe` });
     } else {
-      const conditions = {};
-      const where = {};
-      if (id) where.id = id;
-      if (name) where.name = name;
-      if (capital) where.capital = capital;
-      if (continents) where.continents = continents;
-      if (region) where.region = region;
-      if (area) where.area = area;
-      if (subregion) where.subregion = subregion;
-      if (population) where.population = population;
-      if (flags) where.flags = flags;
+      // const conditions = {};
+      // const where = {};
+      // if (id) where.id = id;
+      // if (name) where.name = name;
+      // if (capital) where.capital = capital;
+      // if (continents) where.continents = continents;
+      // if (region) where.region = region;
+      // if (area) where.area = area;
+      // if (subregion) where.subregion = subregion;
+      // if (population) where.population = population;
+      // if (flags) where.flags = flags;
 
-      conditions.where = where;
+      // conditions.where = where;
 
-      const paises = await Country.findAll(conditions);
-      res.json(paises);
+      const paises = await Country.findAll({
+        attributes: [
+          "id",
+          "name",
+          "flags",
+          "continents",
+          "capital",
+          "subregion",
+          "area",
+          "population",
+        ],
+        include: Activity,
+      });
+      res.status(200).json(paises);
       console.log(1);
     }
   } catch (error) {

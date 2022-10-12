@@ -1,6 +1,5 @@
 import {
   GET_ALL_COUNTRIES,
-  CREATE_ACTIVITY,
   GET_COUNTRY_BY_ID,
   SEARCH_COUNTRY,
   FILTER_STATUS,
@@ -12,12 +11,10 @@ import {
 
 const initialState = {
   countriesAll: [],
-  activityCreate: [],
   buscarCountry: [],
   countryId: [],
   allCountries: [],
   getActivities: [],
-  filtroCountries: [],
   activitiesGet: [],
 };
 
@@ -29,11 +26,7 @@ export default function rootReducer(state = initialState, action) {
         countriesAll: action.payload,
         allCountries: action.payload,
       };
-    case CREATE_ACTIVITY:
-      return {
-        ...state,
-        activityCreate: action.payload,
-      };
+
     case GET_COUNTRY_BY_ID:
       return {
         ...state,
@@ -57,9 +50,10 @@ export default function rootReducer(state = initialState, action) {
         countriesAll: filtroStatus,
       };
     case FILTER_ALFABETIC:
+      const ordenamientoA = state.countriesAll;
       const ordenamiento =
         action.payload === "asc"
-          ? state.countriesAll.sort(function (a, b) {
+          ? ordenamientoA.sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;
               } else if (b.name > a.name) {
@@ -68,7 +62,7 @@ export default function rootReducer(state = initialState, action) {
               return 0;
             })
           : action.payload === "desc"
-          ? state.countriesAll.sort(function (a, b) {
+          ? ordenamientoA.sort(function (a, b) {
               if (a.name > b.name) {
                 return -1;
               }
@@ -118,7 +112,7 @@ export default function rootReducer(state = initialState, action) {
     case FILTRO_ACT:
       const todosPaises = state.allCountries;
       const filtroFinal = todosPaises.filter((e) =>
-        e.activity.some((r) => r.name === action.payload)
+        e.activities.some((r) => r.name === action.payload)
       );
       console.log("todos paises: " + todosPaises);
       return {
