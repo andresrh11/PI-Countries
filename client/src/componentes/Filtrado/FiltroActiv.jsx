@@ -4,12 +4,14 @@ import {
   filtroActividades,
   getActivitiesDb,
   getAllCountries,
+  countryPorId,
 } from "../../redux/actions";
 import "./filtroo.css";
 export default function FiltroActiv() {
   const activities = useSelector((state) => state.getActivities);
+  const filtroPais = useSelector((state) => state.countryId);
   const dispatch = useDispatch();
-
+  console.log("actividad: " + activities.name);
   activities.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
@@ -22,6 +24,7 @@ export default function FiltroActiv() {
   useEffect(() => {
     dispatch(getActivitiesDb());
   }, [dispatch]);
+
   function handleFilterA(e) {
     if (e.target.checked) {
       dispatch(filtroActividades(e.target.value));
@@ -29,7 +32,6 @@ export default function FiltroActiv() {
       dispatch(getAllCountries());
     }
   }
-  console.log(activities);
 
   if (activities) {
     return (

@@ -4,6 +4,7 @@ import { filterCountries } from "../../redux/actions";
 import "./filtroo.css";
 export default function FiltroContAct({ setPaginaActual }) {
   const dispatch = useDispatch();
+
   function handleFilter(e) {
     setPaginaActual(1);
     dispatch(filterCountries(e.target.value));

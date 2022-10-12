@@ -77,9 +77,9 @@ export const filtroActividades = (payload) => {
     payload,
   };
 };
-export const getActivitiesDb = (payload) => async (dispatch) => {
+export const getActivitiesDb = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:3001/activities", payload);
+    const res = await axios.get("http://localhost:3001/activities");
     console.log(res);
     dispatch({
       type: GET_ACTIVITIES,

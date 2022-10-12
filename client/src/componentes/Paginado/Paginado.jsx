@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./paginado.css";
 export default function Paginado({
@@ -16,6 +16,10 @@ export default function Paginado({
   for (let i = 0; i <= Math.ceil(paginitas / paisesPorPagina) - 1; i++) {
     numerosPag.push(i + 1);
   }
+  useEffect(() => {
+    if (paginaActual === 1) setPaisesPorPagina(9);
+    else if (paginaActual !== 1) setPaisesPorPagina(10);
+  }, [paginaActual]);
 
   function handleNext() {
     if (paginaActual !== numerosPag.length) {
@@ -26,8 +30,6 @@ export default function Paginado({
       setMinPages(minPages + pages);
     }
   }
-  if (paginaActual === 1) setPaisesPorPagina(9);
-  else if (paginaActual !== 1) setPaisesPorPagina(10);
 
   function handlePrev() {
     if (paginaActual !== 1) {
@@ -38,8 +40,7 @@ export default function Paginado({
       setMinPages(minPages - pages);
     }
   }
-  if (paginaActual !== 1) setPaisesPorPagina(10);
-  else setPaisesPorPagina(9);
+
   return (
     <nav>
       <ul className="paginado">

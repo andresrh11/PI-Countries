@@ -57,10 +57,9 @@ export default function rootReducer(state = initialState, action) {
         countriesAll: filtroStatus,
       };
     case FILTER_ALFABETIC:
-      const countriesAz = state.allCountries;
-      let ordenamiento =
+      const ordenamiento =
         action.payload === "asc"
-          ? countriesAz.sort(function (a, b) {
+          ? state.countriesAll.sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;
               } else if (b.name > a.name) {
@@ -69,7 +68,7 @@ export default function rootReducer(state = initialState, action) {
               return 0;
             })
           : action.payload === "desc"
-          ? countriesAz.sort(function (a, b) {
+          ? state.countriesAll.sort(function (a, b) {
               if (a.name > b.name) {
                 return -1;
               }
@@ -78,7 +77,7 @@ export default function rootReducer(state = initialState, action) {
               }
               return 0;
             })
-          : state.countriesAll;
+          : state.allCountries;
       return {
         ...state,
         countriesAll: ordenamiento,
@@ -86,7 +85,7 @@ export default function rootReducer(state = initialState, action) {
     case FILTER_POPULATION:
       const ordenamientoP =
         action.payload === "max"
-          ? state.allCountries.sort(function (a, b) {
+          ? state.countriesAll.sort(function (a, b) {
               if (a.population > b.population) {
                 return 1;
               } else if (b.population > a.population) {
@@ -95,7 +94,7 @@ export default function rootReducer(state = initialState, action) {
               return 0;
             })
           : action.payload === "min"
-          ? state.allCountries.sort(function (a, b) {
+          ? state.countriesAll.sort(function (a, b) {
               if (a.population > b.population) {
                 return -1;
               }
@@ -104,7 +103,7 @@ export default function rootReducer(state = initialState, action) {
               }
               return 0;
             })
-          : state.countriesAll;
+          : state.allCountries;
 
       return {
         ...state,
@@ -117,8 +116,11 @@ export default function rootReducer(state = initialState, action) {
         activitiesGet: action.payload,
       };
     case FILTRO_ACT:
-      const todosPaises = state.activitiesGet;
-      const filtroFinal = todosPaises.filter((e) => e.name === action.payload);
+      const todosPaises = state.allCountries;
+      const filtroFinal = todosPaises.filter((e) =>
+        e.activity.some((r) => r.name === action.payload)
+      );
+      console.log("todos paises: " + todosPaises);
       return {
         ...state,
         countriesAll: action.payload !== "" ? filtroFinal : state.allCountries,
