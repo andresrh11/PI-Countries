@@ -12,7 +12,7 @@ export default function Activity(props) {
           </div>
         ))
       ) : (
-        <div> No hay actividades</div>
+        <div className="no__hay"> No hay actividades</div>
       )}
     </div>
   );

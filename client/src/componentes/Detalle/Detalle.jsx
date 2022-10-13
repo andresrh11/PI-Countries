@@ -37,7 +37,7 @@ export default function Detalle() {
           <div className="detalle">
             <h1>Codigo: {id}</h1>
             <h1>Continente: {continents}</h1>
-            <img src={flags} alt=""></img>
+            <img src={flags} alt="" className="imagen__detalle"></img>
             <h1>Nombre: {name}</h1>
             <h2>Capital: {capital}</h2>
             <h3>Subregion: {subregion}</h3>

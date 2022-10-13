@@ -131,6 +131,8 @@ margin-left: 5px;
 .input__name{
     border: 2px solid green;
     border-radius: 5px;
+    height: 30px;
+    width: 200px;
 }
 .input__name__error{
     border: 2px solid red;

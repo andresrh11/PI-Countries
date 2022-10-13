@@ -14,3 +14,10 @@
     box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
     background-color: rgb(168, 165, 185);
 }
+.no__hay{
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { ordenamientoFilter, ordenamientoP } from "../../redux/actions";
 import "./filtroo.css";
 
-export default function FiltroOrdenamiento({ setPaginaActual }) {
+export default function FiltroOrdenamiento({ setPaginaActual, setOrder }) {
   const dispatch = useDispatch();
-  const [order, setOrder] = useState("");
 
   function handleSortA(e) {
     e.preventDefault();
-    dispatch(ordenamientoFilter(e.target.value));
     setPaginaActual(1);
+    dispatch(ordenamientoFilter(e.target.value));
     setOrder(e.target.value);
   }
   function handleSortP(e) {
     e.preventDefault();
-    dispatch(ordenamientoP(e.target.value));
     setPaginaActual(1);
+    dispatch(ordenamientoP(e.target.value));
     setOrder(e.target.value);
   }
   return (

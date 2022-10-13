@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCountries, createActivity } from "../../redux/actions";
 import "./form.css";
-import actividad from "../../img/actividades.png";
+
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import validaciones from "../validaciones";

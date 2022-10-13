@@ -8,18 +8,18 @@ import FiltroActiv from "../Filtrado/FiltroActiv";
 
 function Home() {
   const [paginaActual, setPaginaActual] = useState(1);
-
+  const [order, setOrder] = useState("");
   return (
     <>
       <Header />
 
       <div>
         <div>
-          <Navbar setPaginaActual={setPaginaActual} />
+          <Navbar setPaginaActual={setPaginaActual} setOrder={setOrder} />
         </div>
         <div className="home">
           <div className="activities__home">
-            <FiltroActiv />
+            <FiltroActiv setPaginaActual={setPaginaActual} />
           </div>
           <div className="div__cards">
             <Cards

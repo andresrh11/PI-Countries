@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import FiltroContAct from "../Filtrado/FiltroContAct";
 import FiltroOrdenamiento from "../Filtrado/FiltroOrdenamiento";
 import "./nav.css";
-export default function Navbar({ setPaginaActual }) {
+export default function Navbar({ setPaginaActual, setOrder }) {
   return (
     <div className="nav">
       <Link to="/crear" className="link">
@@ -14,7 +14,10 @@ export default function Navbar({ setPaginaActual }) {
       </Link>
       <div className="filtros">
         <FiltroContAct setPaginaActual={setPaginaActual} />
-        <FiltroOrdenamiento setPaginaActual={setPaginaActual} />
+        <FiltroOrdenamiento
+          setPaginaActual={setPaginaActual}
+          setOrder={setOrder}
+        />
       </div>
     </div>
   );

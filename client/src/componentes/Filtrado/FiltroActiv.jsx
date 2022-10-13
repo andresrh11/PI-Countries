@@ -4,12 +4,11 @@ import {
   filtroActividades,
   getActivitiesDb,
   getAllCountries,
-  countryPorId,
 } from "../../redux/actions";
 import "./filtroo.css";
-export default function FiltroActiv() {
+export default function FiltroActiv({ setPaginaActual }) {
   const activities = useSelector((state) => state.getActivities);
-  const filtroPais = useSelector((state) => state.coutriesAll);
+
   const dispatch = useDispatch();
 
   activities.sort(function (a, b) {
@@ -25,6 +24,7 @@ export default function FiltroActiv() {
   }, [dispatch]);
 
   function handleFilterA(e) {
+    setPaginaActual(1);
     if (e.target.checked) {
       dispatch(filtroActividades(e.target.value));
     } else if (!e.target.checked) {
