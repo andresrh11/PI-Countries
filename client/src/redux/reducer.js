@@ -39,7 +39,6 @@ export default function rootReducer(state = initialState, action) {
       };
     case FILTER_STATUS:
       const allCountries = state.allCountries;
-
       const filtroStatus =
         action.payload === "All"
           ? state.allCountries
