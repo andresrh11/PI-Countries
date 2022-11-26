@@ -10,16 +10,16 @@ export default function Paginado({
   setPaisesPorPagina,
 }) {
   const [maxPages, setMaxPages] = useState(6);
-  const [pages,] = useState(6);
+  const [pages] = useState(6);
   const [minPages, setMinPages] = useState(0);
   const numerosPag = [];
   for (let i = 0; i <= Math.ceil(paginitas / paisesPorPagina) - 1; i++) {
     numerosPag.push(i + 1);
   }
-  useEffect(() => {
-    if (paginaActual === 1) setPaisesPorPagina(9);
-    else if (paginaActual !== 1) setPaisesPorPagina(10);
-  }, [paginaActual]);
+  // useEffect(() => {
+  //   if (paginaActual === 1) setPaisesPorPagina(9);
+  //   else if (paginaActual !== 1) setPaisesPorPagina(10);
+  // }, [paginaActual]);
 
   function handleNext() {
     if (paginaActual !== numerosPag.length) {

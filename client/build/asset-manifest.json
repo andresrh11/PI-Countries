@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0cba293.chunk.css",
+    "main.js": "/static/js/main.e83d1116.chunk.js",
+    "main.js.map": "/static/js/main.e83d1116.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d3b7be25.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d3b7be25.js.map",
+    "static/js/2.449a464d.chunk.js": "/static/js/2.449a464d.chunk.js",
+    "static/js/2.449a464d.chunk.js.map": "/static/js/2.449a464d.chunk.js.map",
+    "static/js/3.0469ce61.chunk.js": "/static/js/3.0469ce61.chunk.js",
+    "static/js/3.0469ce61.chunk.js.map": "/static/js/3.0469ce61.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e0cba293.chunk.css.map": "/static/css/main.e0cba293.chunk.css.map",
+    "static/js/2.449a464d.chunk.js.LICENSE.txt": "/static/js/2.449a464d.chunk.js.LICENSE.txt",
+    "static/media/linkedin.793a7600.png": "/static/media/linkedin.793a7600.png",
+    "static/media/form.css": "/static/media/map-117174.8a941924.png",
+    "static/media/detalle.css": "/static/media/mapa.69f21219.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3b7be25.js",
+    "static/js/2.449a464d.chunk.js",
+    "static/css/main.e0cba293.chunk.css",
+    "static/js/main.e83d1116.chunk.js"
+  ]
+}
