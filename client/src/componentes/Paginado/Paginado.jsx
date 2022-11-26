@@ -7,7 +7,6 @@ export default function Paginado({
   paginacion,
   setPaginaActual,
   paginaActual,
-  setPaisesPorPagina,
 }) {
   const [maxPages, setMaxPages] = useState(6);
   const [pages] = useState(6);

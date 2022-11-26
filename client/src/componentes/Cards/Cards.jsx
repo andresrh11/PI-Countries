@@ -38,7 +38,6 @@ function Cards({ paginaActual, setPaginaActual }) {
             paginacion={paginacion}
             setPaginaActual={setPaginaActual}
             paginaActual={paginaActual}
-            setPaisesPorPagina={setPaisesPorPagina}
           />
         </div>
         <div className="cards">
