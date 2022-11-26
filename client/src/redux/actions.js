@@ -11,7 +11,7 @@ export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const FILTRO_ACT = "FILTRO_ACT";
 export const getAllCountries = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:3001/countries");
+    const res = await axios.get("http://eworldapp.netlify.app/countries");
     dispatch({
       type: GET_ALL_COUNTRIES,
       payload: res.data,
@@ -22,7 +22,7 @@ export const getAllCountries = () => async (dispatch) => {
 };
 export const countryPorId = (id) => async (dispatch) => {
   try {
-    const res = await axios.get(`http://localhost:3001/countries/${id}`);
+    const res = await axios.get(`http://eworldapp.netlify.app/countries/${id}`);
     dispatch({
       type: GET_COUNTRY_BY_ID,
       payload: res.data,
@@ -33,7 +33,10 @@ export const countryPorId = (id) => async (dispatch) => {
 };
 export const createActivity = (payload) => async (dispatch) => {
   try {
-    const res = await axios.post("http://localhost:3001/activities", payload);
+    const res = await axios.post(
+      "http://eworldapp.netlify.app/activities",
+      payload
+    );
 
     return res;
   } catch (error) {
@@ -41,7 +44,9 @@ export const createActivity = (payload) => async (dispatch) => {
   }
 };
 export const searchCountr = (name) => async (dispatch) => {
-  const res = await axios.get(`http://localhost:3001/countries?name=${name}`);
+  const res = await axios.get(
+    `http://eworldapp.netlify.app/countries?name=${name}`
+  );
   dispatch({
     type: SEARCH_COUNTRY,
     payload: res.data,
@@ -76,7 +81,7 @@ export const filtroActividades = (payload) => {
 };
 export const getActivitiesDb = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:3001/activities");
+    const res = await axios.get("http://eworldapp.netlify.app/activities");
     console.log(res);
     dispatch({
       type: GET_ACTIVITIES,
