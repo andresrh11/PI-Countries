@@ -8,7 +8,7 @@ import FiltroActiv from "../Filtrado/FiltroActiv";
 
 function Home() {
   const [paginaActual, setPaginaActual] = useState(1);
-  const [order, setOrder] = useState("");
+  const [,setOrder] = useState("");
   return (
     <>
       <Header />

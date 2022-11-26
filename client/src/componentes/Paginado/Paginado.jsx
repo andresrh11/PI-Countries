@@ -10,7 +10,7 @@ export default function Paginado({
   setPaisesPorPagina,
 }) {
   const [maxPages, setMaxPages] = useState(6);
-  const [pages, setPages] = useState(6);
+  const [pages,] = useState(6);
   const [minPages, setMinPages] = useState(0);
   const numerosPag = [];
   for (let i = 0; i <= Math.ceil(paginitas / paisesPorPagina) - 1; i++) {
