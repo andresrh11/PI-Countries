@@ -86,7 +86,7 @@ export const filtroActividades = (payload) => {
 export const getActivitiesDb = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "http://pi-countries-ashy.vercel.app/activities"
+      "https://e-world-countries.herokuapp.com/activities"
     );
     console.log(res);
     dispatch({
