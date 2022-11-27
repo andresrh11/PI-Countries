@@ -38,7 +38,7 @@ export const countryPorId = (id) => async (dispatch) => {
 export const createActivity = (payload) => async (dispatch) => {
   try {
     const res = await axios.post(
-      "https://e-world-countries.herokuapp.com//activities",
+      "https://e-world-countries.herokuapp.com/activities",
       payload
     );
 
