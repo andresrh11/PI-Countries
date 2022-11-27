@@ -12,7 +12,7 @@ export const FILTRO_ACT = "FILTRO_ACT";
 export const getAllCountries = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "http://pi-countries-ashy.vercel.app/countries"
+      "https://e-world-countries.herokuapp.com/countries"
     );
     dispatch({
       type: GET_ALL_COUNTRIES,
@@ -25,7 +25,7 @@ export const getAllCountries = () => async (dispatch) => {
 export const countryPorId = (id) => async (dispatch) => {
   try {
     const res = await axios.get(
-      `http://pi-countries-ashy.vercel.app/countries/${id}`
+      `https://e-world-countries.herokuapp.com/countries/${id}`
     );
     dispatch({
       type: GET_COUNTRY_BY_ID,
@@ -38,7 +38,7 @@ export const countryPorId = (id) => async (dispatch) => {
 export const createActivity = (payload) => async (dispatch) => {
   try {
     const res = await axios.post(
-      "http://pi-countries-ashy.vercel.app/activities",
+      "https://e-world-countries.herokuapp.com//activities",
       payload
     );
 
@@ -49,7 +49,7 @@ export const createActivity = (payload) => async (dispatch) => {
 };
 export const searchCountr = (name) => async (dispatch) => {
   const res = await axios.get(
-    `http://pi-countries-ashy.vercel.app/countries?name=${name}`
+    `https://e-world-countries.herokuapp.com/countries?name=${name}`
   );
   dispatch({
     type: SEARCH_COUNTRY,
