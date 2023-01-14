@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const GET_ALL_COUNTRIES = "GET_ALL_COUNTRIES";
-
 export const SEARCH_COUNTRY = "SEARCH_COUNTRY";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY_BY_ID";
 export const FILTER_STATUS = "FILTER_STATUS";
@@ -12,7 +11,7 @@ export const FILTRO_ACT = "FILTRO_ACT";
 export const getAllCountries = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://e-world-countries.herokuapp.com/countries"
+      "https://pi-countries-production-553a.up.railway.app/countries"
     );
     dispatch({
       type: GET_ALL_COUNTRIES,
@@ -25,7 +24,7 @@ export const getAllCountries = () => async (dispatch) => {
 export const countryPorId = (id) => async (dispatch) => {
   try {
     const res = await axios.get(
-      `https://e-world-countries.herokuapp.com/countries/${id}`
+      `https://pi-countries-production-553a.up.railway.app/countries/${id}`
     );
     dispatch({
       type: GET_COUNTRY_BY_ID,
@@ -38,7 +37,7 @@ export const countryPorId = (id) => async (dispatch) => {
 export const createActivity = (payload) => async (dispatch) => {
   try {
     const res = await axios.post(
-      "https://e-world-countries.herokuapp.com/activities",
+      "https://pi-countries-production-553a.up.railway.app/activities",
       payload
     );
 
@@ -49,7 +48,7 @@ export const createActivity = (payload) => async (dispatch) => {
 };
 export const searchCountr = (name) => async (dispatch) => {
   const res = await axios.get(
-    `https://e-world-countries.herokuapp.com/countries?name=${name}`
+    `https://pi-countries-production-553a.up.railway.app/countries?name=${name}`
   );
   dispatch({
     type: SEARCH_COUNTRY,
@@ -86,7 +85,7 @@ export const filtroActividades = (payload) => {
 export const getActivitiesDb = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://e-world-countries.herokuapp.com/activities"
+      "https://pi-countries-production-553a.up.railway.app/activities"
     );
     console.log(res);
     dispatch({
